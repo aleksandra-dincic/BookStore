@@ -1,0 +1,146 @@
+﻿@using Application.Models
+@model List<BookModel>
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1>Admin Panel</h1>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 50px">
+    <div class="col-md-6">
+        <h3>All books</h3>
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-primary" id="btnAddBook" onclick="Admin.openAddBook()" data-bs-toggle="modal" data-bs-target="#addUpdateBook" style="float: right">Add</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-sm table-bordered table-responsive" id="booksTable"> 
+            <thead class="bg-success">
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Short Description</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Authors</th>
+                    <th>IsFeatured</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="usersTableBody">
+                @foreach(var book in Model)
+                {
+                    <tr>
+                        <td>@book.Id</td>
+                        <td>@book.Title</td>
+                        <td>@book.ShortDescription</td>
+                        <td>@book.Price</td>
+                        <td>@book.Category.ToString()</td>
+                        <td>@book.Authors</td>
+                        <td>@book.IsFeatured</td>
+                        <th>
+                            <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#addUpdateBook" onclick="Admin.openUpdateBook('@book.Id')">Edit</button>
+                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteBookModal" onclick="Admin.openDeleteBook('@book.Id')">Delete</button>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteBookModal" role="dialog" aria-labelledby="deleteBookLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete book</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h5 style="margin-top: 10px; ">Do you want to delete selected book?</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="deleteBook" onclick="Admin.deleteBook()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addUpdateBook" role="dialog" aria-labelledby="addUpdateBookLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add book</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="newBookTitle">Title: </label>
+                        <input type="text" id="newBookTitle" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="newBookPrice">Price: </label>
+                        <input type="text" id="newBookPrice" class="form-control" />
+                    </div>
+                </div>
+                <div class="row" style="margin-top:10px">
+                    <div class="col-md-12">
+                        <label for="newBookAuthors">Authors: </label>
+                        <textarea id="newBookAuthors" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:10px">
+                    <div class="col-md-12">
+                        <label for="newBookShortDescription">Short Description: </label>
+                        <textarea id="newBookShortDescription" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:10px">
+                    <div class="col-md-12">
+                        <label for="newBookDescription">Description: </label>
+                        <textarea id="newBookDescription" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:10px">
+                    <div class="col-md-6">
+                        <label for="newBookUrl">Photo Url: </label>
+                        <input type="text" id="newBookUrl" class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="newBookCategory">Category: </label>
+                        <select class="form-control" id="newBookCategory">
+                            <option value="0" selected>None</option>
+                            <option value="1">Classics</option>
+                            <option value="2">Crime</option>
+                            <option value="3">Comedy</option>
+                            <option value="4">Fantasy</option>
+                            <option value="5">Horror</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="newBookFeatured" class="form-check-label">Featured: </label>
+                        <input type="checkbox" class="form-check" id="newBookFeatured" style="margin-left: 50%;margin-top: 5px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="saveBook" onclick="Admin.addNewBook()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

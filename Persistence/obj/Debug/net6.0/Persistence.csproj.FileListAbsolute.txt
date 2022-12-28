@@ -1,0 +1,15 @@
+D:\BookStore\BookStore\Persistence\bin\Debug\net6.0\Persistence.deps.json
+D:\BookStore\BookStore\Persistence\bin\Debug\net6.0\Persistence.dll
+D:\BookStore\BookStore\Persistence\bin\Debug\net6.0\Persistence.pdb
+D:\BookStore\BookStore\Persistence\bin\Debug\net6.0\Domain.dll
+D:\BookStore\BookStore\Persistence\bin\Debug\net6.0\Domain.pdb
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\Persistence.csproj.AssemblyReference.cache
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfoInputs.cache
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfo.cs
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\Persistence.csproj.CoreCompileInputs.cache
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\Persistence.csproj.CopyComplete
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\Persistence.dll
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\refint\Persistence.dll
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\Persistence.pdb
+D:\BookStore\BookStore\Persistence\obj\Debug\net6.0\ref\Persistence.dll

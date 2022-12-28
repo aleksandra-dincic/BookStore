@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application",
+    "\\Application\\Services",
+    "\\Application\\Services\\Behaviour",
+    "\\BookStore",
+    "\\BookStore\\Controllers",
+    "\\BookStore\\wwwroot",
+    "\\BookStore\\wwwroot\\js",
+    "\\Persistence"
+  ],
+  "SelectedNode": "\\Persistence\\MongoConstants.cs",
+  "PreviewInSolutionExplorer": false
+}

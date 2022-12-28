@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "g/+uFfUJduXkyBlmWPHp7u4f7Tm/daoC1JiEZ3QlESNdJBig67KzLTppcx7SRPm1Nzqv/5MFzy5JNwcbocQVSw==",
+  "success": true,
+  "projectFilePath": "D:\\BookStore\\BookStore\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aleks\\.nuget\\packages\\mongodb.bson\\2.18.0\\mongodb.bson.2.18.0.nupkg.sha512",
+    "C:\\Users\\aleks\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
